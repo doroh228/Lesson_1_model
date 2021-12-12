@@ -7,5 +7,9 @@
   </time>
   <p>
     <%= q.body %>
+    <br>
+    <%= link_to 'Edit', edit_question_path(q) %> |
+    <%= button_to 'Show', question_path(q), method: :get %>
+    <%= button_to 'Delete', question_path(q), method: :delete, data: {:confirm =>'Are you sure?'} %>
   </p>
 <% end %>
